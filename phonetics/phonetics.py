@@ -1,9 +1,11 @@
 from redbot.core import commands
+from random import randint
 
 
 # noinspection PyMissingConstructor
 class Phonetics(commands.Cog):
-    """Description of the cog visible with [p]help MyFirstCog"""
+    """Description of the cog visible with [p]help MyFirstCog.
+    Also if you didn't notice, *not there yet*."""
 
     def __init__(self, bot):
         self.bot = bot
@@ -35,9 +37,20 @@ class Phonetics(commands.Cog):
             'Y': ('Yankee', '__YANG__ KEY'),
             'Z': ('Zulu', '__ZOO__ LOO')
         }
+        self.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     @commands.command()
-    async def phonetics(self, ctx):
+    async def codeword(self, ctx, letter=None):
         """Not there yet, dumbo."""
+        if letter is None:
+            letter = self.alphabet[randint(0, 26)]
+        letter = letter.upper()
+        await ctx.send(letter + " " + self.ph[letter][0])
 
-        await ctx.send(self.ph['A'])
+    @commands.command()
+    async def phonetic(self, ctx, letter=None):
+        """Not there yet, dumbo."""
+        if letter is None:
+            letter = self.alphabet[randint(0, 26)]
+        letter = letter.upper()
+        await ctx.send(letter + " " + self.ph[letter][1])
