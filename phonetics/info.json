@@ -3,8 +3,8 @@
   "install_msg": "Thank you for installing this cog. To learn what al this is about, type `[p]phonetic info`",
   "name": "phonetics",
   "short": "Learn the NATO phonetic alphabet",
-  "requirements": [ "None" ],
+  "requirements": [ ],
   "description": "Helps users learn the NATO phonetic alphabet as described here: <https://en.wikipedia.org/wiki/NATO_phonetic_alphabet>",
-  "permissions": [ "send messages, read messages, embeds" ],
+  "permissions": [ ],
   "tags": [ "todo: List of search tags for the Red portal" ]
 }
