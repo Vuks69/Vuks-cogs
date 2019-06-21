@@ -40,4 +40,4 @@ class Phonetics(commands.Cog):
     async def phonetics(self, ctx):
         """Not there yet, dumbo."""
 
-        await ctx.send("Great success!")
+        await ctx.send(self.ph['A'])
