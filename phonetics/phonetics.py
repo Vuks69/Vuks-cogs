@@ -1,6 +1,7 @@
 from redbot.core import commands
 
 
+# noinspection PyMissingConstructor
 class Phonetics(commands.Cog):
     """Description of the cog visible with [p]help MyFirstCog"""
 
