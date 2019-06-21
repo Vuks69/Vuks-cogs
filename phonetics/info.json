@@ -1,6 +1,6 @@
 {
   "author": [ "Vuks" ],
-  "install_msg": "Thank you for installing this cog. To learn what al this is about, type `[p]phonetic info`",
+  "install_msg": "Thank you for installing this cog. To learn what al this is about, type `[p]phonetics info`",
   "name": "phonetics",
   "short": "Learn the NATO phonetic alphabet",
   "requirements": [ ],
