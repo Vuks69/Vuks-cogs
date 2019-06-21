@@ -4,8 +4,9 @@ from random import randint
 
 # noinspection PyMissingConstructor
 class Phonetics(commands.Cog):
-    """Description of the cog visible with [p]help MyFirstCog.
-    Also if you didn't notice, *not there yet*."""
+    """`WIP`
+    2008 – present ICAO code words
+    2008 – present ICAO respelling"""
 
     def __init__(self, bot):
         self.bot = bot
@@ -40,17 +41,33 @@ class Phonetics(commands.Cog):
         self.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     @commands.command()
-    async def codeword(self, ctx, letter=None):
+    async def codeword(self, ctx, letter: str=None):
         """Not there yet, dumbo."""
         if letter is None:
             letter = self.alphabet[randint(0, 26)]
-        letter = letter.upper()
-        await ctx.send(letter + " " + self.ph[letter][0])
+        elif len(letter) > 1:
+            letter = letter[0].upper()
+        elif not letter.isupper():
+            letter = letter.upper()
+
+        await ctx.send(letter + ": " + self.ph[letter][0])
 
     @commands.command()
     async def phonetic(self, ctx, letter=None):
         """Not there yet, dumbo."""
         if letter is None:
             letter = self.alphabet[randint(0, 26)]
-        letter = letter.upper()
-        await ctx.send(letter + " " + self.ph[letter][1])
+        elif len(letter) > 1:
+            letter = letter[0].upper()
+        elif not letter.isupper():
+            letter = letter.upper()
+
+        await ctx.send(letter + ": " + self.ph[letter][0] + " " + self.ph[letter][1])
+
+    @commands.command()
+    async def trivia(self, ctx):
+        delta = """"Delta" is replaced by "Data", "Dixie", or "David" at airports that have a majority of 
+            Delta Air Lines flights, such as at Hartsfield-Jackson Atlanta International Airport, 
+            in order to avoid confusion because "Delta" is also Delta's callsign."""
+
+        await ctx.send(delta)
