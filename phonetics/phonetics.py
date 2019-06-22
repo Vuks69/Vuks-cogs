@@ -75,8 +75,8 @@ class Phonetics(commands.Cog):
     @commands.command()
     async def phtrivia(self, ctx):
         """Tells you some facts about the NATO phonetic alphabet"""
-        delta = """"Delta" is replaced by "Data", "Dixie", or "David" at airports that have a majority of 
-        Delta Air Lines flights, such as at Hartsfield-Jackson Atlanta International Airport, 
-        in order to avoid confusion because "Delta" is also Delta's callsign."""
+        delta = ("\"Delta\" is replaced by \"Data\", \"Dixie\", or \"David\" at airports that have a majority of "
+                 "Delta Air Lines flights, such as at Hartsfield-Jackson Atlanta International Airport, "
+                 "in order to avoid confusion because \"Delta\" is also Delta's callsign.")
 
         await ctx.send(delta)
