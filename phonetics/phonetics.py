@@ -42,7 +42,8 @@ class Phonetics(commands.Cog):
 
     @commands.command()
     async def codeword(self, ctx, letter: str=None):
-        """Shows a given letter's codeword"""
+        """Shows a given letter's codeword
+        If no letter is given, a random one will be chosen instead"""
         if letter is None:
             letter = self.alphabet[randint(0, 26)]
         elif len(letter) > 1:
@@ -57,7 +58,8 @@ class Phonetics(commands.Cog):
 
     @commands.command()
     async def phonetic(self, ctx, letter=None):
-        """Shows a given letter's codeword and pronunciation"""
+        """Shows a given letter's codeword and pronunciation
+        If no letter is given, a random one will be chosen instead"""
         if letter is None:
             letter = self.alphabet[randint(0, 26)]
         elif len(letter) > 1:
