@@ -42,7 +42,7 @@ class Phonetics(commands.Cog):
 
     @commands.command()
     async def codeword(self, ctx, letter: str=None):
-        """Not there yet, dumbo."""
+        """Shows a given letter's codeword"""
         if letter is None:
             letter = self.alphabet[randint(0, 26)]
         elif len(letter) > 1:
@@ -54,7 +54,7 @@ class Phonetics(commands.Cog):
 
     @commands.command()
     async def phonetic(self, ctx, letter=None):
-        """Not there yet, dumbo."""
+        """Shows a given letter's codeword and pronunciation"""
         if letter is None:
             letter = self.alphabet[randint(0, 26)]
         elif len(letter) > 1:
@@ -65,9 +65,10 @@ class Phonetics(commands.Cog):
         await ctx.send(letter + ": " + self.ph[letter][0] + " " + self.ph[letter][1])
 
     @commands.command()
-    async def trivia(self, ctx):
+    async def phtrivia(self, ctx):
+        """Tells you some facts about the NATO phonetic alphabet"""
         delta = """"Delta" is replaced by "Data", "Dixie", or "David" at airports that have a majority of 
-            Delta Air Lines flights, such as at Hartsfield-Jackson Atlanta International Airport, 
-            in order to avoid confusion because "Delta" is also Delta's callsign."""
+        Delta Air Lines flights, such as at Hartsfield-Jackson Atlanta International Airport, 
+        in order to avoid confusion because "Delta" is also Delta's callsign."""
 
         await ctx.send(delta)
