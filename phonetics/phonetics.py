@@ -50,7 +50,10 @@ class Phonetics(commands.Cog):
         elif not letter.isupper():
             letter = letter.upper()
 
-        await ctx.send(letter + ": " + self.ph[letter][0])
+        try:
+            await ctx.send(letter + ": " + self.ph[letter][0])
+        except KeyError:
+            await ctx.send("Syntax error: letter must be in range (A-Z). No special characters or numbers allowed.")
 
     @commands.command()
     async def phonetic(self, ctx, letter=None):
@@ -62,7 +65,10 @@ class Phonetics(commands.Cog):
         elif not letter.isupper():
             letter = letter.upper()
 
-        await ctx.send(letter + ": " + self.ph[letter][0] + " " + self.ph[letter][1])
+        try:
+            await ctx.send(letter + ": " + self.ph[letter][0] + " " + self.ph[letter][1])
+        except KeyError:
+            await ctx.send("Syntax error: letter must be in range (A-Z). No special characters or numbers allowed.")
 
     @commands.command()
     async def phtrivia(self, ctx):
