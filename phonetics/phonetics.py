@@ -40,7 +40,7 @@ class Phonetics(commands.Cog):
         }
         self.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    @commands.command()
+    @commands.command(aliases=["cw"])
     async def codeword(self, ctx, letter: str=None):
         """Shows a given letter's codeword
         If no letter is given, a random one will be chosen instead"""
@@ -56,7 +56,7 @@ class Phonetics(commands.Cog):
         except KeyError:
             await ctx.send("Syntax error: letter must be in range (A-Z). No special characters or numbers allowed.")
 
-    @commands.command()
+    @commands.command(aliases=["ph"])
     async def phonetic(self, ctx, letter=None):
         """Shows a given letter's codeword and pronunciation
         If no letter is given, a random one will be chosen instead"""
