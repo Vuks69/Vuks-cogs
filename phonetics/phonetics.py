@@ -71,10 +71,11 @@ class Phonetics(commands.Cog):
             await ctx.send(letter + ": " + self.ph[letter][0] + " " + self.ph[letter][1])
         except KeyError:
             await ctx.send("Syntax error: letter must be in range (A-Z). No special characters or numbers allowed.")
-
+    # todo examples?
     @commands.command()
     async def phtrivia(self, ctx):
         """Tells you some facts about the NATO phonetic alphabet"""
+        # todo get more info, show at random, allow 'more'
         delta = ("\"Delta\" is replaced by \"Data\", \"Dixie\", or \"David\" at airports that have a majority of "
                  "Delta Air Lines flights, such as at Hartsfield-Jackson Atlanta International Airport, "
                  "in order to avoid confusion because \"Delta\" is also Delta's callsign.")
