@@ -13,9 +13,9 @@ class Identicon(commands.Cog):
     Generates an unique avatar using your Discord ID
 
     Many thanks to Fixator10#7133 for the idea and help on this.
-	Unfortunately there are a few bugs that need to be ironed out.
-	For example, calling `[p]identicon` with user ID will only work
-	if you provide the `scale` and `size` params.
+    Unfortunately there are a few bugs that need to be ironed out.
+    For example, calling `[p]identicon` with user ID will only work
+    if you provide the `scale` and `size` params.
     """
 
     def __init__(self, bot):
@@ -56,7 +56,7 @@ class Identicon(commands.Cog):
 
         msg = ""
         DEFAULT_SCALE = 10
-		DEFAULT_SIZE = 240
+        DEFAULT_SIZE = 240
         scale = scale if scale else DEFAULT_SCALE
         if scale < 5 or scale > 15:
             msg += (
@@ -64,11 +64,9 @@ class Identicon(commands.Cog):
             )
             scale = DEFAULT_SCALE
         size = size - size % scale if size else DEFAULT_SIZE - DEFAULT_SIZE % scale
-		if size < 10 or size > 2000 :
-			msg += (
-				f"Size is out of bounds <10, 2000> and has been set to {DEFAULT_SIZE}.\n"
-			)
-			size = DEFAULT_SIZE - DEFAULT_SIZE % scale
+        if size < 10 or size > 2000:
+            msg += f"Size is out of bounds <10, 2000> and has been set to {DEFAULT_SIZE}.\n"
+            size = DEFAULT_SIZE - DEFAULT_SIZE % scale
         colorful = colorful if isinstance(colorful, bool) else True
 
         if isinstance(user, int):
