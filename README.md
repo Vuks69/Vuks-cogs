@@ -1,11 +1,17 @@
-# Repository Name
-Description of your repository
+# Vuks-cogs
+This repo contains cogs for
+[Red-Discordbot](https://github.com/Cog-Creators/Red-DiscordBot) V3.
 
 # Installation
-Provide installation instructions and possible 3rd party requirements.
+Use Downloader:
+
+`[p]repo add vuks https://github.com/Vuks69/Vuks-cogs`
+
+`[p]cog install vuks <cog>`
 
 # Contact
-Information on how to contact you about issues, bugs, and enhancements to your work
+You can find me on [Red's Discord server](https://discord.gg/red) (Vuks#5767),
+or here through issues.
 
 # Credits
-Cite credit to anyone you collaborated with, or authors of code you used in your work that is not your own.
+Thank you to everyone in the Red community for introducing me to the bot!
