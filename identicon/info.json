@@ -1,0 +1,12 @@
+{
+    "author": ["Vuks"],
+    "name": "Identicon",
+    "disabled": false,
+    "short": "Identicon generator",
+    "description": "Generates identicons based on provided user ID's. WIP.",
+    "tags": ["identicon", "identicons"],
+    "hidden": false,
+    "min_bot_version": "3.4.0",
+    "requirements": ["pydenticon"],
+    "end_user_data_statement": "This cog does not persistently store data or metadata about users.",
+}
