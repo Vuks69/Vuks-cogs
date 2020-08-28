@@ -1,10 +1,17 @@
 {
-  "author": [ "Vuks" ],
-  "install_msg": "Thank you for installing this cog. To learn what all this is about, type `>>WORK IN PROGRESS<<`",
-  "name": "phonetics",
+  "author": [
+    "Vuks#5767"
+  ],
+  "install_msg": "Thank you for installing this cog. WIP.",
+  "name": "Phonetics",
   "short": "Learn the NATO phonetic alphabet",
-  "requirements": [ ],
+  "requirements": [],
   "description": "Helps users learn the NATO phonetic alphabet as described here: <https://en.wikipedia.org/wiki/NATO_phonetic_alphabet>",
-  "permissions": [ ],
-  "tags": [ ]
+  "type": "COG",
+  "hidden": false,
+  "min_bot_version": "3.4.0",
+  "permissions": [],
+  "tags": [
+    "phonetics"
+  ]
 }
