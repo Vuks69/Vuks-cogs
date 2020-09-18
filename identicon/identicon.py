@@ -46,7 +46,7 @@ class Identicon(commands.Cog):
                 user = await ctx.bot.fetch_user(user)
             except discord.NotFound:
                 await ctx.send(
-                    chat.error(f"Discord user with ID `{}` not found").format(user)
+                    chat.error("Discord user with ID `{}` not found").format(user)
                 )
                 return
             except discord.HTTPException:
