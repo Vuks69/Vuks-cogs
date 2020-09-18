@@ -4,9 +4,12 @@ from random import randint
 
 # noinspection PyMissingConstructor
 class Phonetics(commands.Cog):
-    """`WIP`
+    """
+    Show ICAO code words for letters, such as "Alpha" for A.
+
     2008 – present ICAO code words
-    2008 – present ICAO respelling"""
+    2008 – present ICAO respelling
+    """
 
     def __init__(self, bot):
         self.bot = bot
