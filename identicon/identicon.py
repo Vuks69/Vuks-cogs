@@ -61,7 +61,6 @@ class Identicon(commands.Cog):
         color_black = "#ffffff"
         fg: [str]
         bg: str
-        # these approaches generate same results
         fg = ["#{:06x}".format(random.randint(0x0, 0xFFFFFF))]
         bg = "#{:06x}".format(random.randint(0x0, 0xFFFFFF))
         if fg[0] == bg:
@@ -69,8 +68,6 @@ class Identicon(commands.Cog):
             bg = color_black if fg != color_black else color_white
 
         f = BytesIO()
-        # pydenticon.Generator(rows, columns, digest=<built-in function openssl_md5>, foreground=['#000000'], background='#ffffff')
-        # NOTE: max scale supported with md5 is 15
         generator = pydenticon.Generator(scale, scale, foreground=fg, background=bg)
         icon = generator.generate(str(user.id), size, size)
         f.write(icon)
