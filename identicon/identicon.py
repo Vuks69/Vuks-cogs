@@ -22,22 +22,19 @@ class Identicon(commands.Cog):
         self,
         ctx: commands.Context,
         user: Union[discord.Member, discord.User, int] = None,
-        colorful: bool = True,
     ):
         """
-        Generate an unique pydenticon using your Discord ID
+        Generate an unique pydenticon with an user's Discord ID
 
         Parameters
         ----------
-        `[user]` - may be an ID, a mention or their username
-        `[colorful]` - True for colors, False for black & white
+        `[user]` - any valid user that shares a server with this bot (ID|tag#1234|tag)
         """
 
         msg = ""
         DEFAULT_SCALE = 9
         DEFAULT_SIZE = 120
 
-        colorful = colorful if isinstance(colorful, bool) else True
         scale = DEFAULT_SCALE
         size = DEFAULT_SIZE - DEFAULT_SIZE % scale
 
@@ -64,16 +61,12 @@ class Identicon(commands.Cog):
         color_black = "#ffffff"
         fg: [str]
         bg: str
-        if colorful:
-            # these approaches generate same results
-            fg = ["#{:06x}".format(random.randint(0x0, 0xFFFFFF))]
-            bg = "#{:06x}".format(random.randint(0x0, 0xFFFFFF))
-            if fg[0] == bg:
-                # squashing an edge case for some users...
-                bg = color_black if fg != color_black else color_white
-        else:  # black & white
-            fg = [color_white]
-            bg = color_black
+        # these approaches generate same results
+        fg = ["#{:06x}".format(random.randint(0x0, 0xFFFFFF))]
+        bg = "#{:06x}".format(random.randint(0x0, 0xFFFFFF))
+        if fg[0] == bg:
+            # squashing an edge case for some users...
+            bg = color_black if fg != color_black else color_white
 
         f = BytesIO()
         # pydenticon.Generator(rows, columns, digest=<built-in function openssl_md5>, foreground=['#000000'], background='#ffffff')
