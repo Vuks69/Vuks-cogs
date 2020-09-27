@@ -2,7 +2,6 @@ from redbot.core import commands
 from random import randint
 
 
-# noinspection PyMissingConstructor
 class Phonetics(commands.Cog):
     """
     Show ICAO code words for letters, such as "Alpha" for A.
