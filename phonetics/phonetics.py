@@ -11,6 +11,7 @@ class Phonetics(commands.Cog):
     """
 
     def __init__(self, bot):
+        super().__init__()
         self.bot = bot
         self.ph = {
             "A": ("Alfa", "__AL__ FAH"),
