@@ -1,8 +1,8 @@
 {
     "author": ["Vuks (Vuks#5767)"],
-    "install_msg": "Sup, thanks for installing my stuff.",
+    "install_msg": "Hey, thank you for installing my cogs.",
     "name": "Vuks-cogs.",
     "short": "Random assortment of cogs.",
-    "description": "Random assortment of cogs - made for learning and entertainment.",
-    "tags": ["Vuks"],
+    "description": "Cogs mostly meant for entertainment, learning experience and non-discord/non-moderation related utilities.",
+    "tags": ["Vuks"]
 }

@@ -1,0 +1,19 @@
+{
+  "author": [
+    "Vuks#5767"
+  ],
+  "install_msg": "Thank you for installing this cog.",
+  "name": "Todo",
+  "short": "Manage your todo list",
+  "requirements": [],
+  "description": "This cog allows users to create, resolve and otherwise manage their todo lists, along with reminders.",
+  "type": "COG",
+  "hidden": false,
+  "min_bot_version": "3.4.0",
+  "permissions": [],
+  "tags": [
+    "todo",
+    "productivity",
+    "time management"
+  ]
+}
