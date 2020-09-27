@@ -23,7 +23,7 @@ class Todo(commands.Cog):
 
     @commands.group()
     async def todo(self, ctx: commands.Context):
-        NotImplementedError()
+        """TODO"""
 
     @todo.command(aliases=["new", "create"])
     async def add(self, ctx: commands.Context, new_todo: str):
@@ -37,8 +37,10 @@ class Todo(commands.Cog):
 
     @todo.command()
     async def list(self, ctx: commands.Context):
+        # https://github.com/aikaterna/gobcog/blob/7721dbfb96622d84ceb3e0dc8c7b60e13a592423/adventure/adventure.py#L3611
         NotImplementedError()
 
     @todo.command(name="todo")
     async def _easter_egg(self, ctx: commands.Context):
+        """Say hi to the Pink Panther!"""
         await ctx.send("Todo, todo, todo todo todo todooooo~")
