@@ -42,7 +42,7 @@ class Todo(commands.Cog):
         # https://github.com/aikaterna/gobcog/blob/7721dbfb96622d84ceb3e0dc8c7b60e13a592423/adventure/adventure.py#L3611
         NotImplementedError()
 
-    @todo.command(name="todo")
+    @todo.command(name="todo", hidden=True)
     async def _easter_egg(self, ctx: commands.Context):
         """Say hi to the Pink Panther!"""
         await ctx.send("Todo, todo, todo todo todo todooooo~")
