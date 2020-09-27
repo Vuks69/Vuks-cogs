@@ -31,9 +31,11 @@ class Todo(commands.Cog):
             user_todos.append(new_todo)
         await ctx.tick()
 
-    @todo.command(aliases=["delete", "del"])
-    async def remove(self, ctx: commands.Context):
-        NotImplementedError()
+    @todo.command(name="clear")
+    async def remove_all(self, ctx: commands.Context):
+        async with self.config.user(ctx.author).todos() as user_todos:
+            user_todos.clear()
+        await ctx.tick()
 
     @todo.command()
     async def list(self, ctx: commands.Context):
