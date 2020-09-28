@@ -30,7 +30,7 @@ class Todo(commands.Cog):
         """TODO"""
 
     @todo.command(aliases=["new", "create"])
-    async def add(self, ctx: commands.Context, new_todo: str):
+    async def add(self, ctx: commands.Context, *, new_todo: str):
         """Add todos to your personal list."""
         async with self.config.user(ctx.author).todos() as user_todos:
             user_todos.append(new_todo)
