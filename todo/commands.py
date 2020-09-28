@@ -45,6 +45,7 @@ class Todo(commands.Cog):
         try:
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=60)
         except asyncio.TimeoutError:
+            await ctx.send("Timeout Error.")
             return
 
         if not pred.result:
