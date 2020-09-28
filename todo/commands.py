@@ -27,18 +27,21 @@ class Todo(commands.Cog):
 
     @todo.command(aliases=["new", "create"])
     async def add(self, ctx: commands.Context, new_todo: str):
+        """Add todos to your personal list."""
         async with self.config.user(ctx.author).todos() as user_todos:
             user_todos.append(new_todo)
         await ctx.tick()
 
     @todo.command(name="clear")
     async def remove_all(self, ctx: commands.Context):
+        """Clear out your todos list"""
         async with self.config.user(ctx.author).todos() as user_todos:
             user_todos.clear()
         await ctx.tick()
 
     @todo.command()
     async def list(self, ctx: commands.Context):
+        """Show your personal todos."""
         # https://github.com/aikaterna/gobcog/blob/7721dbfb96622d84ceb3e0dc8c7b60e13a592423/adventure/adventure.py#L3611
         NotImplementedError()
 
