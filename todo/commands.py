@@ -5,6 +5,7 @@ import discord
 from typing import Literal
 
 from redbot.core import commands, Config
+from redbot.core.utils.chat_formatting import pagify, box
 from redbot.core.utils.menus import start_adding_reactions
 from redbot.core.utils.predicates import ReactionPredicate
 
@@ -58,8 +59,12 @@ class Todo(commands.Cog):
     @todo.command()
     async def list(self, ctx: commands.Context):
         """Show your personal todos."""
-        # TODO
-        pass
+        msg = "Your todo list:\n"
+        async with self.config.user(ctx.author).todos() as user_todos:
+            for todo in user_todos:
+                msg += "+ {}\n".format(todo)
+        for page in pagify(msg, ["\n"], shorten_by=16):
+            await ctx.send(box(page.lstrip(" "), lang="diff"))
 
     @todo.command(name="todo", hidden=True)
     async def _easter_egg(self, ctx: commands.Context):
